@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 
 import { Hero} from './shared/hero';
 import { HEROES } from './shared/mock-heroes'
+import { HeroDetailComponent }  from './hero-detail.component/hero-detail.component';
+import { HeroEditComponent } from './hero-edit.component/hero-edit.component';
+
 
 @Component({
   selector: 'app-root',

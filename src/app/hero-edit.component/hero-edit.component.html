@@ -1,0 +1,8 @@
+  <div class="row editpanel">
+    <div class="col-md-4"> <img [src]="'./assets/PNG/' + hero.imagePath"/></div>
+    <div class="col-md-8">
+              <label for="">Id:</label> <strong> {{hero.id}}</strong>  <br/>
+    <label for="">Name:</label> <input type="text" [(ngModel)]="hero.name"> <br/>
+    <label for="">Image:</label> <input type="text" [(ngModel)]="hero.imagePath"><br/>
+   </div>
+   </div>
