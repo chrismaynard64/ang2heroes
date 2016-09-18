@@ -13,7 +13,8 @@
   <div class="col-md-8 hero-label">
     <label for="">Id:</label> <strong> {{hero.id}}</strong>  <br/>
     <label for="">Name:</label> <strong> {{hero.name}}</strong>  <br/>
-    <label for="">Image:</label> <strong> {{hero.imagePath}}</strong> 
+    <label for="">Image:</label> <strong> {{hero.imagePath}}</strong> <br/>
+    <button (click)="editHero(hero)">Edit</button>
      </div> 
 </li>
    </ul>
@@ -21,12 +22,13 @@
 
 <div class="col-md-6" *ngIf="heroInEdit">
   <div class="row">
-    <div class="col-md-4"></div>
+    <div class="col-md-4"> <img [src]="'./assets/PNG/' + heroInEdit.imagePath"/></div>
     <div class="col-md-8">
-              <label for="">Id:</label> <strong> {{hero.id}}</strong>  <br/>
-    <label for="">Name:</label> <input type="text" [(heroInEdit.name)]> <br/>
-    <label for="">Image:</label> <input type="text" [(heroInEdit.imagePath)]>
-    </div>
+              <label for="">Id:</label> <strong> {{heroInEdit.id}}</strong>  <br/>
+    <label for="">Name:</label> <input type="text" [(ngModel)]="heroInEdit.name"> <br/>
+    <label for="">Image:</label> <input type="text" [(ngModel)]="heroInEdit.imagePath"><br/>
+     <button (click)="heroInEdit = null;">Save</button>
+  </div>
 
 </div>
 

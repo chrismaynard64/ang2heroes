@@ -11,11 +11,15 @@ import { HEROES } from './shared/mock-heroes'
 export class AppComponent {
   title = 'Tour of Heroes';
   heroes: Hero[];
-  
+  heroInEdit: Hero = null;
 
   constructor()  {
     this.heroes = HEROES;
+    //this.heroInEdit = this.heroes[0];
   }
 
+ public editHero(hero) {
+   this.heroInEdit = hero;
+ }
 
 }
