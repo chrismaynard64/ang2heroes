@@ -1,0 +1,25 @@
+
+<div class="row">
+
+  <div class="col-md-3"></div>
+  <div class="col-md-6" *ngIf="!heroInEdit">
+      <ul class="hero">
+      <li *ngFor="let hero of heroes" class="row hero">
+          <bjk-hero  [hero]="hero"></bjk-hero>
+          <button (click)="editHero(hero)">Edit</button>
+    </li>
+      </ul>
+  </div>
+
+  <div class="col-md-6" *ngIf="heroInEdit">
+      <bjk-hero-edit  [hero]="heroInEdit"></bjk-hero-edit>
+      <button (click)="heroInEdit = null;">Save</button>
+
+  </div>
+
+
+
+  <div class="col-md-3"></div>
+
+  </div>
+   
