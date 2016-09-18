@@ -1,3 +1,37 @@
 <h1>
   {{title}}
 </h1>
+
+
+<div class="row">
+
+<div class="col-md-3"></div>
+<div class="col-md-6" *ngIf="!heroInEdit">
+  <ul class="hero">
+  <li *ngFor="let hero of heroes" class="row hero">
+    <div class="col-md-4 hero-potrait" > <img [src]="'./assets/PNG/' + hero.imagePath"/>  </div>
+  <div class="col-md-8 hero-label">
+    <label for="">Id:</label> <strong> {{hero.id}}</strong>  <br/>
+    <label for="">Name:</label> <strong> {{hero.name}}</strong>  <br/>
+    <label for="">Image:</label> <strong> {{hero.imagePath}}</strong> 
+     </div> 
+</li>
+   </ul>
+</div>
+
+<div class="col-md-6" *ngIf="heroInEdit">
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-8">
+              <label for="">Id:</label> <strong> {{hero.id}}</strong>  <br/>
+    <label for="">Name:</label> <input type="text" [(heroInEdit.name)]> <br/>
+    <label for="">Image:</label> <input type="text" [(heroInEdit.imagePath)]>
+    </div>
+
+</div>
+
+
+</div>
+<div class="col-md-3"></div>
+
+  </div>
