@@ -24,3 +24,12 @@ div.editpanel {
         border-radius: 6px;
 
 }
+
+nav a.active {
+  color: magenta;
+}
+
+.ng-dirty .ng-invalid {
+border: 1px solid red;
+
+}

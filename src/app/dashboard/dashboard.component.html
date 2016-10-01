@@ -3,8 +3,8 @@
 
     <div class="row">
                     <div  *ngFor="let hero of topHeroes" class="col-md-2">
-                         <img [src]="'./assets/PNG/' + hero.imagePath"/> <br/>
-                         <span>{{hero.name}}</span>
+                        <a (click)="gotoDetail(hero)"> <img [src]="'./assets/PNG/' + hero.imagePath"/></a> <br/>
+                         <span><a (click)="gotoDetail(hero)">{{hero.name}}</a></span>
                     </div>
 
     </div>

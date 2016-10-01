@@ -1,0 +1,23 @@
+
+
+ <form (ngSubmit)="updateHero()"  [formGroup]="heroForm" novalidate>
+  <div class="row editpanel">
+    <div class="col-md-4"> <img [src]="'./assets/PNG/' + hero.imagePath"/></div>
+    <div class="col-md-8">
+
+        <div class="form-group row">
+          <label for="" class="col-md-3 col-form-label">Id:</label>
+            <div  class="col-md-9">
+              <strong> {{hero.id}}</strong>
+            </div>
+        </div>
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Name:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="name" id="name"  class="form-control" required  formControlName="name" r> 
+        </div>
+    </div>
+    </div>
+  </div>
+ </form>

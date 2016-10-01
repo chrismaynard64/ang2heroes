@@ -4,8 +4,13 @@
     <div class="col-md-8 hero-label">
       <label for="">Id:</label> <strong> {{hero.id}}</strong>  <br/>
       <label for="">Name:</label> <strong> {{hero.name}}</strong>  <br/>
-      <label for="">Class:</label> <strong> {{heroClasses[hero.heroClass]}}</strong>  <br/>
       <label for="">Image:</label> <strong> {{hero.imagePath}}</strong> <br/>
     
      </div>
  </div>
+ <div class="row">   
+       <div class="col-md-12 hero-label">
+            <a (click)="back()">Back</a>     <a [routerLink]="['/edit',  hero.id]">Edit</a>
+       </div>
+
+</div>

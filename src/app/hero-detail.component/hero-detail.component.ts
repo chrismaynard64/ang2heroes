@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Hero} from '../shared/hero';
+import { Hero, HeroClass} from '../shared/hero';
 
 @Component({
   selector: 'bjk-hero',
@@ -11,7 +11,11 @@ export class HeroDetailComponent {
   @Input()
   hero: Hero;
 
+  heroClasses = HeroClass;
+  heroKeys = null;
 
 
-
+  constructor() {
+    this.heroKeys = Object.keys(this.heroClasses).filter(Number);
+  }
 }

@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'bjk-app',
   template: `
     <h1>{{title}}</h1>
+      <a routerLink="/"  routerLinkActive="active">Home</a> | <a routerLink="/heroes"  routerLinkActive="active">Heroes</a>
    <router-outlet></router-outlet>
  
   `
