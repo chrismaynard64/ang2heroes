@@ -15,9 +15,99 @@
      <div class="form-group row">
         <label for="" class="col-md-3 col-form-label">Name:</label> 
         <div  class="col-md-9">
-         <input type="text"   name="name" id="name"  class="form-control" required  formControlName="name" r> 
+         <input type="text"   name="name" id="name"  class="form-control" required  formControlName="name"> 
         </div>
     </div>
+
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Image:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="name" id="imagePath"  class="form-control" required  formControlName="imagePath"> 
+        </div>
+    </div>
+
+
+     <div class="form-group row">
+       <label for="" class="col-md-3 col-form-label">Class:</label> 
+         <div  class="col-md-9">
+        <select formControlName="heroClass"  name="heroClass" id="heroClass" formControlName="heroClass">
+            <option *ngFor=" let key of heroKeys" [value]="key" [label]="heroClasses[key]"></option>
+          </select>
+       </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Strength:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="strength" id="strength"  class="form-control" required  formControlName="strength"> 
+        </div>
+    </div>
+
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Constitution:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="constitution" id="constitution"  class="form-control" required  formControlName="constitution"> 
+        </div>
+    </div>
+
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Dexterity:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="dexterity" id="dexterity"  class="form-control" required  formControlName="dexterity"> 
+        </div>
+    </div>
+
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Intelligence:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="intelligence" id="intelligence"  class="form-control" required  formControlName="intelligence"> 
+        </div>
+    </div>
+
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Magic ttack:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="magicAttack" id="magicAttack"  class="form-control" required  formControlName="magicAttack"> 
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Magic Defense:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="magicDefense" id="magicDefense"  class="form-control" required  formControlName="magicDefense"> 
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Melee Attack:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="meleeAttack" id="meleeAttack"  class="form-control" required  formControlName="meleeAttack"> 
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Melee Defense:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="meleeDefense" id="meleeDefense"  class="form-control" required  formControlName="meleeDefense"> 
+        </div>
+    </div>
+
+     <div class="form-group row">
+        <label for="" class="col-md-3 col-form-label">Ranged Attack:</label> 
+        <div  class="col-md-9">
+         <input type="text"   name="rangedAttack" id="rangedAttack"  class="form-control" required  formControlName="rangedAttack"> 
+        </div>
+    </div>
+
     </div>
   </div>
+
+    <div>{{ heroForm.value | json }}</div>
+  <div> Valid: {{heroForm.valid}}</div>
+
  </form>

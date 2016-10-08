@@ -30,7 +30,7 @@
 
 
      <div class="form-group row">
-       <label for="" class="col-md-3 col-form-label">Image:</label> 
+       <label for="" class="col-md-3 col-form-label">Class:</label> 
          <div  class="col-md-9">
         <select  [(ngModel)]="hero.heroClass"  name="heroClass" id="heroClass">
             <option *ngFor=" let key of keys" [value]="key" [label]="heroClasses[key]"></option>
@@ -68,6 +68,41 @@
        <input type="number" [(ngModel)]="hero.intelligence" name="intelligence" id="intelligence" class="form-control" required>
        </div>
     </div>
+    <div class="form-group row">
+       <label for="" class="col-md-3 col-form-label">Magic Attack:</label> 
+        <div  class="col-md-9">
+       <input type="number" [(ngModel)]="hero.magicAttack" name="magicAttack" id="magicAttack" class="form-control" required>
+       </div>
+    </div>
+
+    <div class="form-group row">
+       <label for="" class="col-md-3 col-form-label">Magic Defense:</label> 
+        <div  class="col-md-9">
+       <input type="number" [(ngModel)]="hero.magicDefense" name="magicDefense" id="magicDefense" class="form-control" required>
+       </div>
+    </div>
+
+    <div class="form-group row">
+       <label for="" class="col-md-3 col-form-label">Melee Attack:</label> 
+        <div  class="col-md-9">
+       <input type="number" [(ngModel)]="hero.meleeAttack" name="meleeAttack" id="meleeAttack" class="form-control" required>
+       </div>
+    </div>
+
+    <div class="form-group row">
+       <label for="" class="col-md-3 col-form-label">Melee Defense:</label> 
+        <div  class="col-md-9">
+       <input type="number" [(ngModel)]="hero.meleeDefense" name="meleeDefense" id="meleeDefense" class="form-control" required>
+       </div>
+    </div>
+
+    <div class="form-group row">
+       <label for="" class="col-md-3 col-form-label">Ranged Attack:</label> 
+        <div  class="col-md-9">
+       <input type="number" [(ngModel)]="hero.rangedAttack" name="rangedAttack" id="rangedAttack" class="form-control" required>
+       </div>
+    </div>
+
 
      <div class="form-group row">
         <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Save</button>
