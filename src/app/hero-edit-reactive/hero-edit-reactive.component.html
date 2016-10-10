@@ -1,4 +1,5 @@
-
+<div>
+<h2 class="reactive">Reactive Form</h2>
 
  <form (ngSubmit)="updateHero()"  [formGroup]="heroForm" novalidate>
   <div class="row editpanel">
@@ -23,7 +24,7 @@
      <div class="form-group row">
         <label for="" class="col-md-3 col-form-label">Image:</label> 
         <div  class="col-md-9">
-         <input type="text"   name="name" id="imagePath"  class="form-control" required  formControlName="imagePath"> 
+         <input type="text"   name="imagePath" id="imagePath"  class="form-control" required  formControlName="imagePath"> 
         </div>
     </div>
 
@@ -111,3 +112,5 @@
   <div> Valid: {{heroForm.valid}}</div>
 
  </form>
+
+ </div>
